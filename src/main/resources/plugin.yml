@@ -1,0 +1,28 @@
+name: ColorTeamingClassSign
+version: 0.1.0
+main: com.github.ucchyocean.ctcs.ColorTeamingClassSign
+description: Class Sign for ColorTeaming
+author: ucchy
+depend: [ColorTeaming]
+
+permissions:
+  ctclasssign.user.use:
+    description: Allows to use the Class Sign.
+    default: true
+  ctclasssign.user.*:
+    children:
+      ctclasssign.user.use: true
+  ctclasssign.admin.place:
+    description: Allows to place new Class Sign.
+    default: op
+  ctclasssign.admin.break:
+    description: Allows to break the Class Sign.
+    default: op
+  ctclasssign.admin.toggle:
+    description: Allows to toggle active/inactive the Class Sign.
+    default: op
+  ctclasssign.admin.*:
+    children:
+      ctclasssign.admin.place: true
+      ctclasssign.admin.break: true
+      ctclasssign.admin.toggle: true
