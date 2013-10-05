@@ -1,10 +1,11 @@
 ColorTeaming ClassSign
 ======================
 
-ƒJƒ‰[ƒ`[ƒ~ƒ“ƒOƒNƒ‰ƒXƒTƒCƒ“
+ã‚«ãƒ©ãƒ¼ãƒãƒ¼ãƒŸãƒ³ã‚°ã‚¯ãƒ©ã‚¹ã‚µã‚¤ãƒ³
 
-ColorTeaming ‚ÅÝ’è‚µ‚½ƒNƒ‰ƒX‚ðAƒJƒ“ƒoƒ“‚ðŽg‚Á‚Ä‘I‘ðE”z•z‚·‚é‚±‚Æ‚ª‚Å‚«‚éƒvƒ‰ƒOƒCƒ“
+ColorTeaming ã§è¨­å®šã—ãŸã‚¯ãƒ©ã‚¹ã‚’ã€ã‚«ãƒ³ãƒãƒ³ã‚’ä½¿ã£ã¦é¸æŠžãƒ»é…å¸ƒã™ã‚‹ã“ã¨ãŒã§ãã‚‹ãƒ—ãƒ©ã‚°ã‚¤ãƒ³<br />
+http://forum.minecraftuser.jp/viewtopic.php?f=38&t=9729&start=240#p130513<br />
 
-ƒ‰ƒCƒZƒ“ƒX‚Í LPGLv3 ‚ð“K—p‚µ‚Ü‚·Bƒ‰ƒCƒZƒ“ƒXð•¶‚Í‰º‹L‚ðŽQÆ‚µ‚Ä‚­‚¾‚³‚¢B<br />
+ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã¯ LPGLv3 ã‚’é©ç”¨ã—ã¾ã™ã€‚ãƒ©ã‚¤ã‚»ãƒ³ã‚¹æ¡æ–‡ã¯ä¸‹è¨˜ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚<br />
 http://sourceforge.jp/magazine/07/09/05/017211<br />
 
