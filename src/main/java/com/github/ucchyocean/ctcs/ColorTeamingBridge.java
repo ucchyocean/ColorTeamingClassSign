@@ -62,6 +62,7 @@ public class ColorTeamingBridge {
         ArrayList<ItemStack> armorData = cdata.getArmor();
         ArrayList<PotionEffect> effectData = cdata.getEffect();
         int experience = cdata.getExperience();
+        int level = cdata.getLevel();
         
         // 全回復の実行
         if ( config.isHealOnSetClass() ) {
@@ -108,8 +109,14 @@ public class ColorTeamingBridge {
         }
 
         // 経験値の設定
-        player.setTotalExperience(experience);
-        Utility.updateExp(player);
+        if ( experience != -1 ) {
+            player.setTotalExperience(experience);
+            Utility.updateExp(player);
+        } else if ( level != -1 ) {
+            player.setTotalExperience(0);
+            Utility.updateExp(player);
+            player.setLevel(level);
+        }
         
         return true;
     }
