@@ -6,6 +6,7 @@
 package com.github.ucchyocean.ctcs;
 
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.block.BlockState;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Player;
@@ -72,7 +73,9 @@ public class ClassSignListener implements Listener {
         }
         
         Player player = event.getPlayer();
-        if ( event.getAction() == Action.LEFT_CLICK_BLOCK ) {
+        if ( event.getAction() == Action.LEFT_CLICK_BLOCK 
+                || (event.getPlayer().getGameMode() == GameMode.ADVENTURE 
+                    && event.getAction() == Action.RIGHT_CLICK_BLOCK ) ) {
             
             if ( !player.hasPermission(PERMISSION_USER_USE) ) {
                 // 権限がない
