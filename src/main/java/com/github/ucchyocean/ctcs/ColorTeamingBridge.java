@@ -7,8 +7,10 @@ package com.github.ucchyocean.ctcs;
 
 import java.util.ArrayList;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.scoreboard.Team;
 
 import com.github.ucchyocean.ct.ColorTeaming;
 import com.github.ucchyocean.ct.ColorTeamingAPI;
@@ -54,5 +56,23 @@ public class ColorTeamingBridge {
         playersToSet.add(player);
         
         return api.setClassToPlayer(playersToSet, name);
+    }
+    
+    /**
+     * 指定されたプレイヤーが、指定されたチームに参加しているかどうかをかえす
+     * @param player プレイヤー名
+     * @param name チーム名
+     * @return 参加しているかどうか
+     */
+    public boolean isPlayerInTeam(Player player, String name) {
+        
+        ColorTeamingAPI api = colorteaming.getAPI();
+        
+        Team team = api.getPlayerTeam(player);
+        if (team == null) {
+            return false;
+        }
+        String dname = ChatColor.stripColor(team.getDisplayName());
+        return (team.getName().equals(name) || dname.equals(name));
     }
 }

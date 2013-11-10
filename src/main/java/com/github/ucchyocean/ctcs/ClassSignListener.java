@@ -42,6 +42,9 @@ public class ClassSignListener implements Listener {
     private static final String MSG_NOT_HAVE_PERMISSION_BREAK = 
             MSG_PRE_ERR + "権限が無いためクラスサインを除去できません。";
     
+    private static final String MSG_NOT_TEAM_MEMBER =
+            MSG_PRE_ERR + "あなたは %s チームのメンバーではないため、使用できません。";
+    
     private ColorTeamingBridge bridge;
     
     /**
@@ -91,6 +94,14 @@ public class ClassSignListener implements Listener {
             if ( !bridge.isExistClass(cname) ) {
                 // 指定されたクラスが既に存在しない
                 player.sendMessage(MSG_NOT_EXIST_CLASS);
+                return;
+            }
+            
+            String tname = sign.getLine(2);
+            if ( tname != null && !tname.equals("") 
+                    && !bridge.isPlayerInTeam(player, tname) ) {
+                // 指定されたチームに参加していない
+                player.sendMessage(String.format(MSG_NOT_TEAM_MEMBER, tname));
                 return;
             }
             
