@@ -1,5 +1,5 @@
-name: ColorTeamingClassSign
-version: 0.4.0
+name: ${project.name}
+version: ${project.version}
 main: com.github.ucchyocean.ctcs.ColorTeamingClassSign
 description: Class Sign for ColorTeaming
 author: ucchy

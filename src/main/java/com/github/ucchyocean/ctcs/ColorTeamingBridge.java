@@ -14,7 +14,6 @@ import org.bukkit.scoreboard.Team;
 
 import com.github.ucchyocean.ct.ColorTeaming;
 import com.github.ucchyocean.ct.ColorTeamingAPI;
-import com.github.ucchyocean.ct.config.ColorTeamingConfig;
 
 /**
  * カラーチーミング 連携クラス
@@ -38,8 +37,7 @@ public class ColorTeamingBridge {
      * @return 存在するかどうか
      */
     public boolean isExistClass(String name) {
-        ColorTeamingConfig config = colorteaming.getCTConfig();
-        return config.getClasses().containsKey(name);
+        return colorteaming.getAPI().isExistClass(name);
     }
     
     /**
