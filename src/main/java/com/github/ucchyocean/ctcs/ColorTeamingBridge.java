@@ -22,15 +22,15 @@ import com.github.ucchyocean.ct.ColorTeamingAPI;
 public class ColorTeamingBridge {
 
     private ColorTeaming colorteaming;
-    
+
     /**
      * コンストラクタ
-     * @param colorteaming 
+     * @param colorteaming
      */
     public ColorTeamingBridge(Plugin colorteaming) {
         this.colorteaming = (ColorTeaming)colorteaming;
     }
-    
+
     /**
      * 指定されたクラスが存在するかどうかを確認する
      * @param name クラス名
@@ -39,7 +39,7 @@ public class ColorTeamingBridge {
     public boolean isExistClass(String name) {
         return colorteaming.getAPI().isExistClass(name);
     }
-    
+
     /**
      * 指定されたプレイヤーに指定されたクラスを設定する
      * @param player プレイヤー
@@ -47,15 +47,15 @@ public class ColorTeamingBridge {
      * @return クラス設定を実行したかどうか
      */
     public boolean setClassToPlayer(Player player, String name) {
-        
+
         ColorTeamingAPI api = colorteaming.getAPI();
-        
+
         ArrayList<Player> playersToSet = new ArrayList<Player>();
         playersToSet.add(player);
-        
+
         return api.setClassToPlayer(playersToSet, name);
     }
-    
+
     /**
      * 指定されたプレイヤーが、指定されたチームに参加しているかどうかをかえす
      * @param player プレイヤー名
@@ -63,9 +63,9 @@ public class ColorTeamingBridge {
      * @return 参加しているかどうか
      */
     public boolean isPlayerInTeam(Player player, String name) {
-        
+
         ColorTeamingAPI api = colorteaming.getAPI();
-        
+
         Team team = api.getPlayerTeam(player);
         if (team == null) {
             return false;

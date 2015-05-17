@@ -30,10 +30,10 @@ public class ColorTeamingClassSign extends JavaPlugin {
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
-        
+
         // ブリッヂの作成
         ColorTeamingBridge bridge = new ColorTeamingBridge(colorteaming);
-        
+
         // リスナーの登録
         getServer().getPluginManager().registerEvents(new ClassSignListener(bridge), this);
     }
